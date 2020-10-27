@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script>
+      addEventListener(
+        "load",
+        function () {
+          setTimeout(hideURLbar, 0);
+        },
+        false
+      );
+
+      function hideURLbar() {
+        window.scrollTo(0, 1);
+      }
+    </script>
+    	<link href="css/verification.css" rel="stylesheet">
+    <link href="./css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="./css/flexslider.css"
+      type="text/css"
+      media="screen"
+      property=""
+    />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <link href="./css/fontawesome-all.css" rel="stylesheet" />
+    <link href="./css/simpleLightbox.css" rel="stylesheet" type="text/css" />
+    <link
+      href="//fonts.googleapis.com/css?family=Poiret+One"
+      rel="stylesheet"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Lato:100i,300,300i,400,400i,700,700i,900"
+      rel="stylesheet"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/stylemenu.css"
+      type="text/css"
+      media="all"
+    />
+    <!-- //Custom-Stylesheet-Links -->
+    <!--fonts -->
+    <link
+      href="//fonts.googleapis.com/css?family=Marcellus+SC"
+      rel="stylesheet"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+      rel="stylesheet"
+    />
+    <!-- //fonts -->
+
+    <!-- Font-Awesome-File-Links -->
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="./css/font-awesome.css"
+      type="text/css"
+      media="all"
+    />
+    <link href="./css/contact.css" rel="stylesheet" type="text/css" />
+    <title>Daddy Pastry</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+  <script src="./js/jquery-2.2.3.min.js"></script>
+  <!-- //js -->
+  <!-- /flexisel -->
+  <!-- <script src="./js/jquery.flexisel.js"></script> -->
+  <!-- //flexisel -->
+  <!-- flexSlider -->
+  <script src="./js/jquery.flexslider.js"></script>
+  <script>
+    $(window).load(function () {
+      $(".flexslider").flexslider({
+        animation: "slide",
+        start: function (slider) {
+          $("body").removeClass("loading");
+        },
+      });
+    });
+  </script>
+
+  <!-- //flexSlider -->
+
+  <!-- simpleLightbox -->
+  <script src="./js/simpleLightbox.js"></script>
+  <script>
+    $(".proj_gallery_grid a").simpleLightbox();
+  </script>
+  <!-- //simpleLightbox -->
+  <!-- /js files -->
+  <link
+    href="./css/aos.css"
+    rel="stylesheet prefetch"
+    type="text/css"
+    media="all"
+  />
+  <link
+    href="./css/aos-animation.css"
+    rel="stylesheet prefetch"
+    type="text/css"
+    media="all"
+  />
+  <script src="./js/aos.js"></script>
+  <script src="./js/aosindex.js"></script>
+  <!-- //js files -->
+  <!--/ start-smoth-scrolling -->
+  <script src="./js/move-top.js"></script>
+  <script src="./js/easing.js"></script>
+  <script>
+    jQuery(document).ready(function ($) {
+      $(".scroll").click(function (event) {
+        event.preventDefault();
+        $("html,body").animate(
+          {
+            scrollTop: $(this.hash).offset().top,
+          },
+          900
+        );
+      });
+    });
+  </script>
+  <!--// end-smoth-scrolling -->
+
+  <script>
+    $(document).ready(function () {
+      /*
+									var defaults = {
+							  			containerID: 'toTop', // fading element id
+										containerHoverID: 'toTopHover', // fading element hover id
+										scrollSpeed: 1200,
+										easingType: 'linear' 
+							 		};
+									*/
+
+      $().UItoTop({
+        easingType: "easeOutQuart",
+      });
+    });
+  </script>
+  <a href="#home" class="scroll" id="toTop" style="display: block;">
+    <span id="toTopHover" style="opacity: 1;"> </span>
+  </a>
+  <!-- //Custom-JavaScript-File-Links -->
+  <script src="./js/bootstrap.js"></script>
+  <script src="./js/minicart.min.js"></script>
+  <script>
+    // Mini Cart
+    paypal1.minicart1.render({
+      //use only unique class names other than paypal1.minicart1.Also Replace same class name in css and minicart.min.js
+      action: "#",
+    });
+
+    if (~window.location.search.indexOf("reset=true")) {
+      paypal1.minicart1.reset();
+    }
+  </script>
+
+  	<!-- //Location verification -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script src="js/verification.js"></script>
+  
+  <!-- //card -->
+      
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script
+    src="https://kit.fontawesome.com/64d1de9587.js"
+    crossorigin="anonymous"
+  ></script> -->
+</html>
